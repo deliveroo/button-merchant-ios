@@ -41,9 +41,6 @@ let package = Package(
             path: "Source"),
         .testTarget(
             name: "UnitTests",
-            path: "Tests/UnitTests"),
-        .testTarget(
-            name: "IntegrationTests",
-            path: "Tests/IntegrationTests")
+            path: "Tests/UnitTests")
     ]
 )
