@@ -48,7 +48,7 @@ class ButtonMerchantTests: XCTestCase {
     }
 
     func testBuildNumber() {
-        XCTAssertEqual(ButtonMerchantVersionNumber, 1)
+        XCTAssertEqual(ButtonMerchant.version(), 1)
     }
 
     func testConfigureApplicationId() {

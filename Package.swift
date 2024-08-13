@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.9
 //
 // Package.swift
 //
@@ -41,9 +41,12 @@ let package = Package(
             path: "Source"),
         .testTarget(
             name: "UnitTests",
-            path: "Tests/UnitTests"),
+            dependencies: ["ButtonMerchant"],
+            resources: [.process("../Resources")]
+        ),
         .testTarget(
             name: "IntegrationTests",
-            path: "Tests/IntegrationTests")
+            dependencies: ["ButtonMerchant"],
+            exclude: ["ObjC"]),
     ]
 )
