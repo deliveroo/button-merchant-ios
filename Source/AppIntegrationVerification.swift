@@ -113,7 +113,7 @@ internal class AppIntegrationVerification: AppIntegrationVerificationType {
     
     func reportResult(url: URL, completion: ((Bool) -> Void)? = nil) {
         if #available(iOS 10.0, *) {
-            application.open(url, options: [:], completionHandler: completion)
+            application.openURL(url, completionHandler: completion)
         }
     }
 }

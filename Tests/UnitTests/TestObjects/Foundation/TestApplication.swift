@@ -31,7 +31,7 @@ class TestApplication: UIApplicationType {
     var actualURL: URL?
     var stubbedOpenResult: Bool = true
     
-    func open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any], completionHandler completion: ((Bool) -> Void)?) {
+    func openURL(_ url: URL, completionHandler completion: ((Bool) -> Void)?) {
         self.actualURL = url
         completion?(stubbedOpenResult)
     }

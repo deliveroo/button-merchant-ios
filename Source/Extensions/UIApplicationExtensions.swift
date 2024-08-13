@@ -26,11 +26,15 @@ import UIKit
 
 internal protocol UIApplicationType {
     @available(iOS 10.0, *)
-    func open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any], completionHandler completion: ((Bool) -> Void)?)
+    func openURL(_ url: URL, completionHandler completion: ((Bool) -> Void)?)
     func quit()
 }
 
 extension UIApplication: UIApplicationType {
+    func openURL(_ url: URL, completionHandler completion: ((Bool) -> Void)?) {
+        open(url, options: [:], completionHandler: completion)
+    }
+    
     func quit() {
         exit(0)
     }
